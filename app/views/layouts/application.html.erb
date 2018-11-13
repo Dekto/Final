@@ -6,7 +6,7 @@
 <% else %>
   <title>HeyAd - Medlems side</title>
 <% end %>
-    <link rel="shortcut icon" href="http://heyad.dk/wp-content/uploads/2018/04/Egenligt_logo.png"/>
+    <link rel="shortcut icon" href="https://heyad.dk/wp-content/uploads/2018/04/Egenligt_logo.png"/>
     <script src="https://wchat.freshchat.com/js/widget.js"></script>
     <title><%= Rails.configuration.application_name %></title>
     <%= csrf_meta_tags %>
@@ -35,8 +35,8 @@
 <% if user_signed_in? %>
     <nav class="navbar ">
       <div class="navbar-brand">
-        <a class="navbar-item" href="http://localhost:3000">
-          <img src="http://heyad.dk/wp-content/uploads/2018/04/Egenligt_logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="32" height="75">
+        <a class="navbar-item" href="https://medlem.heyad.dk">
+          <img src="https://heyad.dk/wp-content/uploads/2018/04/Egenligt_logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="32" height="75">
         </a>
 
         <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
@@ -72,7 +72,7 @@
                  <%= link_to 'Din konto', edit_user_registration_path, class: "navbar-link" %>
                  <div class="navbar-dropdown is-right">
                    <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
-                   <%= link_to "Log Ud 🔒", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                   <%= link_to "Log ud 🔒", destroy_user_session_path, method: :delete, class:"navbar-item" %>
                  </div>
 
                    </div>
@@ -98,8 +98,8 @@
   <% else %>
   <nav class="navbar ">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://serene-bastion-81341.herokuapp.com/">
-        <img src="http://heyad.dk/wp-content/uploads/2018/04/Egenligt_logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="32" height="75">
+      <a class="navbar-item" href="https://medlem.heyad.dk/">
+        <img src="https://heyad.dk/wp-content/uploads/2018/04/Egenligt_logo.png" alt="Kør og tjen penge dagligt" width="32" height="75">
       </a>
 
       <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
@@ -122,10 +122,10 @@
          </div>
          <div id="navbarMenuHeroA" class="navbar-menu">
            <div class="navbar-end">
-             <a class="navbar-item " href="http://localhost:3000/users/sign_in">
+             <a class="navbar-item " href="https://medlem.heyad.dk/users/sign_in">
                <span class="bd-emoji">🤗</span> &nbsp;Log ind
              </a>
-             <a class="navbar-item " href="http://localhost:3000/users/sign_up">
+             <a class="navbar-item " href="https://medlem.heyad.dk/users/sign_up">
                <span class="bd-emoji">😍</span> &nbsp;Opret konto
              </a>
                  </div>
@@ -144,7 +144,7 @@
     <div class="container">
       <div class="content has-text-centered">
         <p>
-         <a href="https://web-crunch.com" target="_blank">Heyad.dk</a> Denne side er pt i BETA så fejl kan opstå. Ved fejl skriv endelig til os.
+         <a href="https://heyad.dk" target="_blank">Heyad.dk</a> Siden er i beta så skriv endelig hvis der opstår fejl. Lavet i samarbejde med <a href="https://web-crunch.com" target="_blank">WebCrunch</a>
         </p>
       </div>
     </div>

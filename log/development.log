@@ -13559,3 +13559,43 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 61ms (Views: 60.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-11-13 21:46:44 +0100
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+:
+
+Started POST "/__better_errors/d482f7ef53a474a7/variables" for 127.0.0.1 at 2018-11-13 21:46:45 +0100
+Started GET "/" for 127.0.0.1 at 2018-11-13 21:46:46 +0100
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+:
+
+Started POST "/__better_errors/1eefa4c2847fb438/variables" for 127.0.0.1 at 2018-11-13 21:46:47 +0100
+Started GET "/" for 127.0.0.1 at 2018-11-13 21:46:47 +0100
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+:
+
+Started POST "/__better_errors/53819332e4b62d30/variables" for 127.0.0.1 at 2018-11-13 21:46:48 +0100
+Started GET "/" for 127.0.0.1 at 2018-11-13 21:50:45 +0100
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+:
+
+Started POST "/__better_errors/ef52a196220763de/variables" for 127.0.0.1 at 2018-11-13 21:50:45 +0100
+Started GET "/" for 127.0.0.1 at 2018-11-13 21:56:04 +0100
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+:
+
+Started POST "/__better_errors/fd3895e13a132744/variables" for 127.0.0.1 at 2018-11-13 21:56:04 +0100

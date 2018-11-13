@@ -25,13 +25,13 @@
 
         <% if current_user.try(:admin) || job_author(job) %>
           <ul class="pv3">
-            <li class="inline-block f6">Admin controls: </li>
+            <li class="inline-block f6">Admin kontrol: </li>
             <li class="inline-block">
               <%= link_to 'View', job, class: 'button is-small is-link is-outlined' %></li>
             <li class="inline-block">
               <%= link_to 'Edit', edit_job_path(job), class: 'button is-small is-link is-outlined' %></li>
             <li class="inline-block">
-              <%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-small is-link is-outlined' %></li>
+              <%= link_to 'Delete', job, method: :delete, data: { confirm: 'Sikker?' }, class: 'button is-small is-link is-outlined' %></li>
           </ul>
         <% end %>
 
@@ -48,8 +48,8 @@
     <p>
       Upps, du var lidt for hurtig, du skal først være logget ind.
       <div class="logindud">
-      <a class="button is-primary" href="http://localhost:3000/users/sign_in">Log ind 🤗</a>
-      <a class="button is-primary" href="http://localhost:3000/users/sign_up">Opret dig nu 😍</a>
+      <a class="button is-primary" href="https://medlem.heyad.dk/users/sign_in">Log ind 🤗</a>
+      <a class="button is-primary" href="https://medlem.heyad.dk/users/sign_up">Opret dig nu 😍</a>
         </div>
     </p>
   </div>
