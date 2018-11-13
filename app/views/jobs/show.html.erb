@@ -1,0 +1,61 @@
+<% if user_signed_in? %>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" rel="stylesheet"/>
+  <div class="columns pt4 pb7">
+    <div class="column is-7 is-offset-1">
+
+      <h1 class="title is-2"><%= @job.title %></h1>
+
+      <ul class="list pb4">
+        <li class="inline-block f6 pr2"><%= job_type(@job.job_type) %></li>
+        <li class="inline-block f6 ph2"><i class="fa fa-pin"></i> <%= @job.location %></li>
+        <% if @job.remote_ok? %>
+          <li class="inline-block f6 ph2"><i class="fa fa-wifi"></i> Remote Job</li>
+        <% end %>
+      </ul>
+
+      <div class="content text-serif f4">
+        <%= @job.description.html_safe %>
+      </div>
+
+      <%= link_to 'Ansøg til kampagne', @job.apply_url, class:"button is-rounded is-large is-fullwidth is-link" %>
+
+    </div>
+
+
+
+    <div class="column is-2 is-offset-1 has-text-centered">
+
+      <% if !@job.avatar.file.nil? %>
+        <%= link_to image_tag(@job.avatar_url(:thumb), alt: @job.job_author, class: "has-text-centered"), @job.url %>
+      <% end %>
+
+      <h5 class="is-5 has-text-centered"><%= link_to @job.job_author %></h5>
+
+      <% if current_user.try(:admin) || job_author(@job) %>
+        <ul class="pv3">
+          <li class="pv1 f6">Admin controls: </li>
+          <li class="pv1 inline-block">
+            <%= link_to 'View', @job, class: 'button is-small is-link is-outlined' %></li>
+          <li class="pv1 inline-block">
+            <%= link_to 'Edit', edit_job_path(@job), class: 'button is-small is-link is-outlined' %></li>
+          <li class="pv1 inline-block">
+            <%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button is-small is-link is-outlined' %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
+    <script type="text/javascript" src="https://heyad.formstack.com/forms/js.php/kampagne"></script><noscript><a href="https://heyad.formstack.com/forms/kampagne" title="Online Form">Online Form - Kampagne</a></noscript>
+    <% else %>
+    <div class="notlijobs">
+      <p>
+        Upps, du var lidt for hurtig, du skal først være logget ind.
+        <div class="logindud">
+        <a class="button is-primary" href="http://localhost:3000/users/sign_in">Log ind 🤗</a>
+        <a class="button is-primary" href="http://localhost:3000/users/sign_up">Opret dig nu 😍</a>
+          </div>
+      </p>
+    </div>
+    </div>
+  <% end %>
+  </div>

@@ -1,0 +1,57 @@
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
+
+      <h2 class="title is-2">Rediger din konto 💪<%= resource_name.to_s.humanize %></h2>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+
+          <div class="field">
+            <div class="control">
+              <%= f.input :name, required: true, autofocus: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <%= f.input :email, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            </div>
+          </div>
+
+          <div class="field">
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <p>Venter på: <%= resource.unconfirmed_email %></p>
+          <% end %>
+          </div>
+
+          <div class="field">
+            <div class="control">
+            <%= f.input :password, autocomplete: "sluk", hint: "lad den være blank hvis du ikke ønsker det", required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+            <%= f.input :password_confirmation, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <%= f.input :current_password, hint: "vi skal bruge din adgangskode", required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            </div>
+        </div>
+
+        <%= f.button :submit, "Opdater", class:"button is-primary" %>
+
+      <% end %>
+
+        <hr />
+        <h3 class="title is-5">Slet min konto og dens data</h3>
+        <p>Ønsker du at slette din konto? <%= link_to "Slet min konto ☹️", registration_path(resource_name), data: { confirm: "Er du sikker? Vi kommer til at savne dig!" }, method: :delete %></p>
+
+      </div>
+    </div>
+  </div>
+</section>
