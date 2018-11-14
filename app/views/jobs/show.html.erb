@@ -26,7 +26,7 @@
     <div class="column is-2 is-offset-1 has-text-centered">
 
       <% if !@job.avatar.file.nil? %>
-        <%= link_to image_tag(:thumb), alt: @job.job_author, class: "has-text-centered") %>
+        <%= link_to image_tag(@job.avatar_url(:thumb), alt: @job.job_author, class: "has-text-centered"), @job.url %>
       <% end %>
 
       <h5 class="is-5 has-text-centered"><%= link_to @job.job_author %></h5>
