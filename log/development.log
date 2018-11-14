@@ -13599,3 +13599,11 @@ PG::ConnectionBad - could not connect to server: No such file or directory
 :
 
 Started POST "/__better_errors/fd3895e13a132744/variables" for 127.0.0.1 at 2018-11-13 21:56:04 +0100
+Started GET "/" for 127.0.0.1 at 2018-11-14 17:35:48 +0100
+
+PG::ConnectionBad - could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+:
+
+Started POST "/__better_errors/637f28f89081632a/variables" for 127.0.0.1 at 2018-11-14 17:35:49 +0100

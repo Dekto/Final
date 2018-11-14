@@ -16,7 +16,7 @@
       <div class="content text-serif f4">
         <%= @job.description.html_safe %>
       </div>
-
+      <script type="text/javascript" src="https://heyad.formstack.com/forms/js.php/kampagne"></script><noscript><a href="https://heyad.formstack.com/forms/kampagne" title="Online Form">Online Form - Kampagne</a></noscript>
       <%= link_to 'Ansøg til kampagne', @job.apply_url, class:"button is-rounded is-large is-fullwidth is-link" %>
 
     </div>
@@ -26,7 +26,7 @@
     <div class="column is-2 is-offset-1 has-text-centered">
 
       <% if !@job.avatar.file.nil? %>
-        <%= link_to image_tag(@job.avatar_url(:thumb), alt: @job.job_author, class: "has-text-centered"), @job.url %>
+        <%= link_to image_tag(:thumb), alt: @job.job_author, class: "has-text-centered") %>
       <% end %>
 
       <h5 class="is-5 has-text-centered"><%= link_to @job.job_author %></h5>
@@ -45,7 +45,7 @@
     </div>
   </div>
 
-    <script type="text/javascript" src="https://heyad.formstack.com/forms/js.php/kampagne"></script><noscript><a href="https://heyad.formstack.com/forms/kampagne" title="Online Form">Online Form - Kampagne</a></noscript>
+
     <% else %>
     <div class="notlijobs">
       <p>
