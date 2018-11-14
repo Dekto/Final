@@ -55,6 +55,7 @@ div.columns.pt4.pb7 > div.column.is-2.is-offset-1.has-text-centered {
     width: 1124px;
     align-content: center;
   }
+
 div.kampagne > div.fsBody.fsEmbed {
   border-color: #ffffff;
   background: #ffffff;
@@ -94,8 +95,9 @@ div.column.is-9.pl6 > div:nth-child(1) {
 div#navbar div > div > div > div > a {
   border-radius: 10px;
 }
+}
 * {
-  font-family: "Popppins";
+  font-family: 'Montserrat', sans-serif;
  }
 column is-7 is-offset-1 {
   width: 300px;
